@@ -16,9 +16,4 @@ export class AppController {
         return this.appService.getAcademicYears();
     }
 
-    // Test api to check mongo db connectivity
-    @Get('experimentalConfig')
-    getExperimentalConfig() {
-        return this.appService.getExperimentalConfig();
-    }
 }

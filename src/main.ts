@@ -14,7 +14,7 @@ async function bootstrap() {
         logger: new Logger(),
     });
     // TODO: Change as per the project requirement
-    app.setGlobalPrefix('backend-base/api/v1');
+    app.setGlobalPrefix('smart-tutor/api/v1');
     app.useGlobalPipes(new ValidationPipe());
 
     SentryService.initializeSentry(app);
