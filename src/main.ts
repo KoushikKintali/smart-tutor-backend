@@ -6,7 +6,6 @@ import EnvValidator from './env/env.validator';
 import SentryService from './middlewares/sentry.middleware';
 import express from 'express';
 import { ValidationPipe } from './pipe/validation.pipe';
-import { createSQSConsumer } from './aws/sqs/sqs-consumer.service';
 require('newrelic');
 
 async function bootstrap() {
@@ -36,7 +35,6 @@ async function bootstrap() {
         SentryService.Handlers.errorHandler() as express.ErrorRequestHandler,
     );
 
-    createSQSConsumer();
 
     await app.listen(process.env.PORT);
 }

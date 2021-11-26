@@ -10,6 +10,5 @@ export const TypeOrmConfig: TypeOrmModuleAsyncOptions = {
         database: process.env.DB_NAME,
         entities: [__dirname + '/../**/*.entity.{js,ts}'],
         synchronize: false,
-        logging: true,
     }),
 };

@@ -4,7 +4,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmConfig } from '../db/config/typeorm.config';
-import { AwsModule } from '../aws/aws.module';
 import { DbModule } from '../db/db.module';
 import { NetworkModule } from '../network/network.module';
 import { SynopsisModule } from '../synopsis/synopsis.module';
@@ -13,7 +12,6 @@ import { SynopsisModule } from '../synopsis/synopsis.module';
     imports: [
         ConfigModule.forRoot(),
         TypeOrmModule.forRootAsync(TypeOrmConfig),
-        AwsModule,
         DbModule,
         NetworkModule,
         SynopsisModule,
