@@ -14,13 +14,13 @@ export class SynopsisService {
 
         try {
             const school = await this.schoolsRepository.getSchools();
-            console.log('SCHOOL', school);
+            if (!school) {
+                throw new BadRequestException('School Not Found');
+            }
             return school;
-            // throw new BadRequestException('School Id missing');
 
         } catch (error) {
-
+            throw error;
         }
-
     }
 }
