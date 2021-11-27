@@ -65,7 +65,8 @@ export class SynopsisService {
             synopsisBlob.type = 'TEACHER';
             synopsisData.synopsisBlobs = synopsisData.synopsisBlobs.concat(synopsisBlob);
 
-            return synopsisData;
+            return this.synopsisRepository.save(synopsisData);
+
 
         } catch (error) {
             throw error;
