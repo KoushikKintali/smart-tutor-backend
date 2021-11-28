@@ -12,6 +12,7 @@ async function bootstrap() {
     const app = await NestFactory.create(AppModule, {
         logger: new Logger(),
     });
+    app.enableCors();
     // TODO: Change as per the project requirement
     app.setGlobalPrefix('smart-tutor/api/v1');
     app.useGlobalPipes(new ValidationPipe());
